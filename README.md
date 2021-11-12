@@ -17,9 +17,16 @@ Alternatively, the checkpoint can also be downloaded using this [link](https://u
 ### Obtaining Quality Scores
 We provide trained regressor models in [models](models) directory which can be used for predicting image quality using features obtained from CONTRIQUE model. For demonstration purposes, some sample images provided in the [sample_images](sample_images) folder.
 
-For blind quality prediction, the following command can be used.
+For blind quality prediction, the following commands can be used.
 ```
-python3 demos_score.py --
+python3 demo_score.py --im_path sample_images/60.bmp --model_path models/CONTRIQUE_checkpoint25.tar --linear_regressor_path models/CLIVE.save
+python3 demo_feat.py --im_path sample_images/img66.bmp --model_path models/CONTRIQUE_checkpoint25.tar --linear_regressor_path models/LIVE.save
+```
+
+For Full-reference quality assessment, the folllowing command can be employed.
+```
+python3 demos_score_FR.py --ref_path sample_images/churchandcapitol.bmp --dist_path sample_images/img66.bmp --model_path models/CONTRIQUE_checkpoint25.tar --linear_regressor_path models/CSIQ_FR.save
+```
 
 ## Contact
 Please contact Pavan (pavan.madhusudana@gmail.com) if you have any questions, suggestions or corrections to the above implementation.
