@@ -9,6 +9,10 @@ The code has been tested on Linux systems with python 3.6. Please refer to [requ
 
 ### Running CONTRIQUE
 In order to obtain quality score using CONTRIQUE model, checkpoint needs to be downloaded. The following command can be used to download the checkpoint.
+```
+wget -L https://utexas.box.com/shared/static/rhpa8nkcfzpvdguo97n2d5dbn4qb03z8.tar -O models/CONTRIQUE_checkpoint25.tar -q --show-progress
+```
+Alternatively the checkpoint can also be downloaded using this [link](https://utexas.box.com/s/rhpa8nkcfzpvdguo97n2d5dbn4qb03z8)
 
 ## Contact
 Please contact Pavan (pavan.madhusudana@gmail.com) if you have any questions, suggestions or corrections to the above implementation.
