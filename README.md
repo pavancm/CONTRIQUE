@@ -20,7 +20,7 @@ We provide trained regressor models in [models](models) directory which can be u
 For blind quality prediction, the following commands can be used.
 ```
 python3 demo_score.py --im_path sample_images/60.bmp --model_path models/CONTRIQUE_checkpoint25.tar --linear_regressor_path models/CLIVE.save
-python3 demo_feat.py --im_path sample_images/img66.bmp --model_path models/CONTRIQUE_checkpoint25.tar --linear_regressor_path models/LIVE.save
+python3 demo_score.py --im_path sample_images/img66.bmp --model_path models/CONTRIQUE_checkpoint25.tar --linear_regressor_path models/LIVE.save
 ```
 
 For Full-reference quality assessment, the folllowing command can be employed.
