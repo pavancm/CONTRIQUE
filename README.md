@@ -28,6 +28,15 @@ For Full-reference quality assessment, the folllowing command can be employed.
 python3 demos_score_FR.py --ref_path sample_images/churchandcapitol.bmp --dist_path sample_images/img66.bmp --model_path models/CONTRIQUE_checkpoint25.tar --linear_regressor_path models/CSIQ_FR.save
 ```
 
+## Training CONTRIQUE
+### Download Training Data
+Create a directory ```mkdir training_data``` to store images used for training CONTRIQUE.
+1. KADIS-700k : Download [KADIS-700k](http://database.mmsp-kn.de/kadid-10k-database.html) dataset and execute the supllied codes to generate synthetically distorted images. Store this data in the ```training_data/kadis700k``` directory.
+2. AVA : Download [AVA](https://github.com/mtobeiyf/ava_downloader) dataset and store in the ```training_data/UGC_images/AVA_Dataset``` directory.
+3. COCO : [COCO](https://cocodataset.org/#download) dataset contains 330k images spread across multiple competitions. We used 4 folders ```training_data/UGC_images/test2015, training_data/UGC_images/train2017, training_data/UGC_images/val2017, training_data/UGC_images/unlabeled2017``` for training.
+4. CERTH-Blur : [Blur](https://mklab.iti.gr/results/certh-image-blur-dataset/) dataset images are stored in the ```training_data/UGC_images/blur_image``` directory.
+5. VOC : [VOC](http://host.robots.ox.ac.uk:8080/pascal/VOC/voc2012/) images are stored in the ```training_data/UGC_images/VOC2012``` directory.
+
 ## Contact
 Please contact Pavan (pavan.madhusudana@gmail.com) if you have any questions, suggestions or corrections to the above implementation.
 
