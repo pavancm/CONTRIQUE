@@ -75,7 +75,7 @@ class image_data(Dataset):
         if torch.is_tensor(idx):
             idx = idx.tolist()
         
-        img_name = '../' + self.fls.iloc[idx]['File_names'].rstrip()
+        img_name = self.fls.iloc[idx]['File_names'].rstrip()
         image_orig = Image.open(img_name)
         
         if image_orig.mode == 'L':
