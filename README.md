@@ -38,12 +38,21 @@ Create a directory ```mkdir training_data``` to store images used for training C
 5. VOC : [VOC](http://host.robots.ox.ac.uk:8080/pascal/VOC/voc2012/) images are stored in the ```training_data/UGC_images/VOC2012``` directory.
 
 ### Training Model
+Download csv files containing path to images and corresponding distortion classes.
+```
+wget -L https://utexas.box.com/shared/static/124n9sfb27chgt59o8mpxl7tomgvn2lo.csv -O csv_files/file_names_ugc.csv -q --show-progress
+wget -L https://utexas.box.com/shared/static/jh5cmu63347auyza37773as5o9zxctby.csv -O csv_files/file_names_syn.csv -q --show-progress
+```
+The above files can also be downloaded manually using these links [link1](https://utexas.box.com/s/jh5cmu63347auyza37773as5o9zxctby), [link2](https://utexas.box.com/s/124n9sfb27chgt59o8mpxl7tomgvn2lo)
+
+
 For training with a single GPU the following command can be used
 ```
 python3 train.py --batch_size 512 --lr 0.6 --epochs 25
 ```
 
 Training with multiple GPUs using Distributed training (Recommended)
+
 Run the following commands on different terminals concurrently
 ```
 CUDA_VISIBLE_DEVICES=0 python3 train.py --nodes 4 --nr 0 --batch_size 128 --lr 0.6 --epochs 25
