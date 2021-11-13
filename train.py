@@ -236,7 +236,7 @@ def parse_args():
                         help = 'number of workers')
     parser.add_argument('--opt', type = str, default = 'sgd',\
                         help = 'optimizer type')
-    parser.add_argument('--lr', type = float, default = 0.6*2,\
+    parser.add_argument('--lr', type = float, default = 0.6,\
                         help = 'learning rate')
     parser.add_argument('--network', type = str, default = 'resnet50',\
                         help = 'network architecture')
