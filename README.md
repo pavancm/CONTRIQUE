@@ -37,6 +37,22 @@ Create a directory ```mkdir training_data``` to store images used for training C
 4. CERTH-Blur : [Blur](https://mklab.iti.gr/results/certh-image-blur-dataset/) dataset images are stored in the ```training_data/UGC_images/blur_image``` directory.
 5. VOC : [VOC](http://host.robots.ox.ac.uk:8080/pascal/VOC/voc2012/) images are stored in the ```training_data/UGC_images/VOC2012``` directory.
 
+### Training Model
+For training with a single GPU the following command can be used
+```
+python3 train.py --batch_size 512 --lr 0.6 --epochs 25
+```
+
+Training with multiple GPUs using Distributed training (Recommended)
+Run the following commands on different terminals concurrently
+```
+CUDA_VISIBLE_DEVICES=0 python3 train.py --nodes 4 --nr 0 --batch_size 128 --lr 0.6 --epochs 25
+CUDA_VISIBLE_DEVICES=1 python3 train.py --nodes 4 --nr 1 --batch_size 128 --lr 0.6 --epochs 25
+CUDA_VISIBLE_DEVICES=2 python3 train.py --nodes 4 --nr 2 --batch_size 128 --lr 0.6 --epochs 25
+CUDA_VISIBLE_DEVICES=3 python3 train.py --nodes 4 --nr 3 --batch_size 128 --lr 0.6 --epochs 25
+```
+Note that in distributed training, ```batch_size``` value will be the number of images to be loaded on each GPU.
+
 ## Contact
 Please contact Pavan (pavan.madhusudana@gmail.com) if you have any questions, suggestions or corrections to the above implementation.
 
