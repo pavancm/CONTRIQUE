@@ -48,19 +48,19 @@ The above files can also be downloaded manually using these links [link1](https:
 
 For training with a single GPU the following command can be used
 ```
-python3 train.py --batch_size 512 --lr 0.6 --epochs 25
+python3 train.py --batch_size 256 --lr 0.6 --epochs 25
 ```
 
 Training with multiple GPUs using Distributed training (Recommended)
 
 Run the following commands on different terminals concurrently
 ```
-CUDA_VISIBLE_DEVICES=0 python3 train.py --nodes 4 --nr 0 --batch_size 128 --lr 0.6 --epochs 25
-CUDA_VISIBLE_DEVICES=1 python3 train.py --nodes 4 --nr 1 --batch_size 128 --lr 0.6 --epochs 25
-CUDA_VISIBLE_DEVICES=2 python3 train.py --nodes 4 --nr 2 --batch_size 128 --lr 0.6 --epochs 25
-CUDA_VISIBLE_DEVICES=3 python3 train.py --nodes 4 --nr 3 --batch_size 128 --lr 0.6 --epochs 25
+CUDA_VISIBLE_DEVICES=0 python3 train.py --nodes 4 --nr 0 --batch_size 64 --lr 0.6 --epochs 25
+CUDA_VISIBLE_DEVICES=1 python3 train.py --nodes 4 --nr 1 --batch_size 64 --lr 0.6 --epochs 25
+CUDA_VISIBLE_DEVICES=2 python3 train.py --nodes 4 --nr 2 --batch_size 64 --lr 0.6 --epochs 25
+CUDA_VISIBLE_DEVICES=3 python3 train.py --nodes 4 --nr 3 --batch_size 64 --lr 0.6 --epochs 25
 ```
-Note that in distributed training, ```batch_size``` value will be the number of images to be loaded on each GPU.
+Note that in distributed training, ```batch_size``` value will be the number of images to be loaded on each GPU. During CONTRIQUE training equal number of images will be loaded from both synthetic and authentic distortions. Thus in the above example code, 128 images will be loaded on each GPU.
 
 ## Contact
 Please contact Pavan (pavan.madhusudana@gmail.com) if you have any questions, suggestions or corrections to the above implementation.
