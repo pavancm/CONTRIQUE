@@ -62,6 +62,13 @@ CUDA_VISIBLE_DEVICES=3 python3 train.py --nodes 4 --nr 3 --batch_size 64 --lr 0.
 ```
 Note that in distributed training, ```batch_size``` value will be the number of images to be loaded on each GPU. During CONTRIQUE training equal number of images will be loaded from both synthetic and authentic distortions. Thus in the above example code, 128 images will be loaded on each GPU.
 
+### Training Linear Regressor
+After CONTRIQUE model training is complete, a linear regressor is trained using CONTRIQUE features and corresponding ground truth quality scores using the following command.
+
+```
+python3 train_regressor.py --feat_path feat.npy --ground_truth_path scores.npy --alpha 0.1
+```
+
 ## Contact
 Please contact Pavan (pavan.madhusudana@gmail.com) if you have any questions, suggestions or corrections to the above implementation.
 
