@@ -14,6 +14,8 @@ wget -L https://utexas.box.com/shared/static/rhpa8nkcfzpvdguo97n2d5dbn4qb03z8.ta
 ```
 Alternatively, the checkpoint can also be downloaded using this [link](https://utexas.box.com/s/rhpa8nkcfzpvdguo97n2d5dbn4qb03z8).
 
+Google drive link for the checkpoint [link](https://drive.google.com/file/d/1pmaomNVFhDgPSREgHBzZSu-SuGzNJyEt/view?usp=drive_web).
+
 ### Obtaining Quality Scores
 We provide trained regressor models in [models](models) directory which can be used for predicting image quality using features obtained from CONTRIQUE model. For demonstration purposes, some sample images provided in the [sample_images](sample_images) folder.
 
@@ -44,6 +46,8 @@ wget -L https://utexas.box.com/shared/static/124n9sfb27chgt59o8mpxl7tomgvn2lo.cs
 wget -L https://utexas.box.com/shared/static/jh5cmu63347auyza37773as5o9zxctby.csv -O csv_files/file_names_syn.csv -q --show-progress
 ```
 The above files can also be downloaded manually using these links [link1](https://utexas.box.com/s/jh5cmu63347auyza37773as5o9zxctby), [link2](https://utexas.box.com/s/124n9sfb27chgt59o8mpxl7tomgvn2lo)
+Google drive links [link1](https://drive.google.com/file/d/1uKcTJ5ioVpOkQ-s7mOOhZNke7XCi9i4Q/view?usp=drive_web), [link2](https://drive.google.com/file/d/11bfkLaAFT7CN_z6fQbC8Zg8yiusIBnE6/view?usp=drive_web)
+
 
 
 For training with a single GPU the following command can be used
