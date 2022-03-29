@@ -30,6 +30,13 @@ For Full-reference quality assessment, the folllowing command can be employed.
 python3 demos_score_FR.py --ref_path sample_images/churchandcapitol.bmp --dist_path sample_images/img66.bmp --model_path models/CONTRIQUE_checkpoint25.tar --linear_regressor_path models/CSIQ_FR.save
 ```
 
+### Obtaining CONTRIQUE Features
+For calculating CONTRIQUE features, the following commands can be used. The features are saved in '.npy' format.
+```
+python3 demo_feat.py --im_path sample_images/60.bmp --model_path models/CONTRIQUE_checkpoint25.tar --features_save_path features.npy
+python3 demo_feat.py --im_path sample_images/img66.bmp --model_path models/CONTRIQUE_checkpoint25.tar --features_save_path features.npy
+```
+
 ## Training CONTRIQUE
 ### Download Training Data
 Create a directory ```mkdir training_data``` to store images used for training CONTRIQUE.
