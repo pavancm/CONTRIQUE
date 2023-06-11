@@ -42,9 +42,6 @@ def train(args, train_loader_syn, train_loader_ugc, \
         syn_i2 = syn_i2.cuda(non_blocking=True)
         ugc_i2 = ugc_i2.cuda(non_blocking=True)
         x_i2 = torch.cat((syn_i2,ugc_i2),dim=0)
-        
-        dist_label = torch.zeros((2*args.batch_size*(args.num_patches), \
-                                  args.clusters+(args.batch_size*args.nodes*args.num_patches)))
 
         # distortion classes
         # synthetic distortion classes
